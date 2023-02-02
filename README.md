@@ -46,3 +46,6 @@ All the micro-services are dockerized and deployable to docker using docker-comp
 4. Integration tests can be added
 5. Batch processing servers should be different from normal API servers
 
+## Bugs
+
+1. Some times the docker is not working need to have a look
