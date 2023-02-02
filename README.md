@@ -17,6 +17,11 @@ The Application consists of
 	3. Microservices
 	4. Table Relationships
 	5. Tables Normalization
+	
+	
+<img
+src="https://github.com/prasanthyedithe/ECommerce-Order-Processing-Engine/blob/e9599ef6323e910655a608b1782c07284722244d/Architectural%20Diagrams/Microservices.jpg"
+/>
 
 ## Features
 1. Uses Netflix Eureka for service discovery
