@@ -32,6 +32,7 @@ All the micro-services are dockerized and deployable to docker using docker-comp
 
 1. Java 11
 2. Docker
+3. Maven
 
 ## Steps to run the project
 
