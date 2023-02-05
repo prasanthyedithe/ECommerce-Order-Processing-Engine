@@ -24,16 +24,16 @@ src="https://github.com/prasanthyedithe/ECommerce-Order-Processing-Engine/blob/e
 />
 
 <BR>
-List of Tables:
-1. orders	
-2. order_addresses	
-3. order_payments	
-4. order_items	
-5. addresses	
-6. payment_methods	
-7. items	
-8. customers	
-9. lookup_data	
+List of Tables:<BR>
+1. orders<BR>
+2. order_addresses<BR>
+3. order_payments<BR>	
+4. order_items<BR>
+5. addresses<BR>	
+6. payment_methods<BR>	
+7. items<BR>	
+8. customers<BR>	
+9. lookup_data<BR>	
 
 <img
 src="https://github.com/prasanthyedithe/ECommerce-Order-Processing-Engine/blob/ea8436a907f401fb3bd3bc9f372245e943ac31dd/Diagrams/Table%20Relationships.jpg"
