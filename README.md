@@ -19,7 +19,9 @@ The Application consists of
 	5. Tables Normalization
 	
 	
-
+<img
+src="https://github.com/prasanthyedithe/ECommerce-Order-Processing-Engine/blob/ea8436a907f401fb3bd3bc9f372245e943ac31dd/Diagrams/Microservices.jpg"
+/>
 
 <BR>
 List of Tables:
@@ -33,7 +35,9 @@ List of Tables:
 8. customers	
 9. lookup_data	
 
-
+<img
+src="https://github.com/prasanthyedithe/ECommerce-Order-Processing-Engine/blob/ea8436a907f401fb3bd3bc9f372245e943ac31dd/Diagrams/Table%20Relationships.jpg"
+/>
 
 ## Features
 1. Uses Netflix Eureka for service discovery
