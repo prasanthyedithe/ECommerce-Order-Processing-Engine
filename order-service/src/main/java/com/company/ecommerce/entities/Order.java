@@ -1,7 +1,15 @@
 package com.company.ecommerce.entities;
 
-import javax.persistence.*;
+import java.util.Date;
 import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="orders")
@@ -33,4 +41,10 @@ public class Order {
 
     @Column
     public double total;
+    
+    @Column(name="created_date")
+    public Date createdDate;
+    
+    @Column(name="updated_date")
+    public Date updatedDate;
 }

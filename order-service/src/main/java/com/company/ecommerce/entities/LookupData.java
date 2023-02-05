@@ -1,4 +1,4 @@
-package com.company.ecommerce.addressservice.entities;
+package com.company.ecommerce.entities;
 
 import java.util.Date;
 import java.util.UUID;
@@ -8,30 +8,31 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="order_addresses")
-public class OrderAddress {
-    @Id
+@Table(name="lookup_data")
+public class LookupData {
+	
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public UUID id;
-
-    @Column(name="order_id")
-    public UUID orderId;
-
-    @OneToOne
-    @JoinColumn(name = "address_id")
-    public Address address;
-
+	
+	@Column
+    public String type;
+	
     @Column
-    public int type;
-    
+    public String key;
+	
+    @Column
+    public String value;
+	  
     @Column(name="created_date")
     public Date createdDate;
     
     @Column(name="updated_date")
     public Date updatedDate;
+
+
+
 }

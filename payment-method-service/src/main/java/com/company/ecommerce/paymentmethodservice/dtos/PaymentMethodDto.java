@@ -10,4 +10,6 @@ public class PaymentMethodDto {
     public double amount;
     public Date date;
     public String confirmationNumber;
+    public Date createdDate;
+    public Date updatedDate;
 }

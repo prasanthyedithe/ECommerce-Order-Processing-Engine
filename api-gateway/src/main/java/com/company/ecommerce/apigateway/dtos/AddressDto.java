@@ -1,5 +1,6 @@
 package com.company.ecommerce.apigateway.dtos;
 
+import java.util.Date;
 import java.util.UUID;
 
 public class AddressDto {
@@ -10,4 +11,6 @@ public class AddressDto {
     public String state;
     public String zip;
     public int type;
+    public Date createdDate;
+    public Date updatedDate;
 }

@@ -1,15 +1,16 @@
 package com.company.ecommerce.paymentmethodservice.services;
 
+import java.util.List;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+
 import com.company.ecommerce.paymentmethodservice.dtos.PaymentMethodDto;
 import com.company.ecommerce.paymentmethodservice.entities.OrderPayment;
 import com.company.ecommerce.paymentmethodservice.exceptions.NotFoundException;
 import com.company.ecommerce.paymentmethodservice.repositories.OrderPaymentRepository;
 import com.company.ecommerce.paymentmethodservice.repositories.PaymentMethodRepository;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Service
 public class PaymentMethodService implements IPaymentMethodService{
@@ -49,6 +50,8 @@ public class PaymentMethodService implements IPaymentMethodService{
         output.date = x.date;
         output.confirmationNumber = x.confirmationNumber;
         output.amount = x.amount;
+        output.createdDate = x.createdDate;
+        output.updatedDate = x.updatedDate;
 
         return output;
     }

@@ -1,7 +1,14 @@
 package com.company.ecommerce.addressservice.entities;
 
-import javax.persistence.*;
+import java.util.Date;
 import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="addresses")
@@ -24,4 +31,10 @@ public class Address {
 
     @Column
     public String zip;
+    
+    @Column(name="created_date")
+    public Date createdDate;
+    
+    @Column(name="updated_date")
+    public Date updatedDate;
 }

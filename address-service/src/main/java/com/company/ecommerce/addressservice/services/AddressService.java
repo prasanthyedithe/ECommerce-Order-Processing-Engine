@@ -1,16 +1,16 @@
 package com.company.ecommerce.addressservice.services;
 
-import com.company.ecommerce.addressservice.dtos.AddressDto;
-import com.company.ecommerce.addressservice.entities.OrderAddress;
-import com.company.ecommerce.addressservice.exceptions.InternalServerException;
-import com.company.ecommerce.addressservice.exceptions.NotFoundException;
-import com.company.ecommerce.addressservice.repositories.AddressRepository;
-import com.company.ecommerce.addressservice.repositories.OrderAddressRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.UUID;
 import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+
+import com.company.ecommerce.addressservice.dtos.AddressDto;
+import com.company.ecommerce.addressservice.entities.OrderAddress;
+import com.company.ecommerce.addressservice.exceptions.NotFoundException;
+import com.company.ecommerce.addressservice.repositories.AddressRepository;
+import com.company.ecommerce.addressservice.repositories.OrderAddressRepository;
 
 @Service
 public class AddressService implements IAddressService{
@@ -49,6 +49,8 @@ public class AddressService implements IAddressService{
         output.zip = addressInput.address.zip;
         output.state = addressInput.address.state;
         output.type = addressInput.type;
+        output.createdDate = addressInput.createdDate;
+        output.updatedDate = addressInput.updatedDate;
         return output;
     }
 }

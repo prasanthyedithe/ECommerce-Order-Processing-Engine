@@ -1,5 +1,6 @@
 package com.company.ecommerce.apigateway.dtos;
 
+import java.util.Date;
 import java.util.UUID;
 
 public class ItemDto {
@@ -7,4 +8,9 @@ public class ItemDto {
     public String name;
     public double price;
     public int quantity;
+    public String productId;
+    public String category;
+    public String subCategory;
+    public Date createdDate;
+    public Date updatedDate;
 }

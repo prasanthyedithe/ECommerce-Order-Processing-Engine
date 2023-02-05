@@ -1,10 +1,15 @@
 package com.company.ecommerce.apigateway.controllers;
 
+import java.util.List;
+
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.company.ecommerce.apigateway.clients.PaymentMethodClient;
 import com.company.ecommerce.apigateway.dtos.PaymentMethod;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 
 @RestController

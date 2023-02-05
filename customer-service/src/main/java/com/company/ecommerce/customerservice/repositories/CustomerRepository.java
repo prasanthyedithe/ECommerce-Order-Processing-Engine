@@ -1,9 +1,10 @@
 package com.company.ecommerce.customerservice.repositories;
 
-import com.company.ecommerce.customerservice.entities.Customer;
+import java.util.UUID;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.UUID;
+import com.company.ecommerce.customerservice.entities.Customer;
 
 public interface CustomerRepository extends JpaRepository<Customer, UUID> {
 }

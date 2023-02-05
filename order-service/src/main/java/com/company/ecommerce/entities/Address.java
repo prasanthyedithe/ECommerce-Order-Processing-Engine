@@ -1,8 +1,16 @@
 package com.company.ecommerce.entities;
 
-import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="addresses")
@@ -28,4 +36,10 @@ public class Address {
 
     @OneToMany(mappedBy = "address")
     List<OrderAddress> orders;
+    
+    @Column(name="created_date")
+    public Date createdDate;
+    
+    @Column(name="updated_date")
+    public Date updatedDate;
 }

@@ -1,10 +1,17 @@
 package com.company.ecommerce.itemservice.entities;
 
+import java.util.Date;
+import java.util.UUID;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
-import java.util.UUID;
 
 @Data
 @NoArgsConstructor
@@ -20,4 +27,19 @@ public class Item {
 
     @Column
     public double price;
+    
+    @Column(name="product_id")
+    public String productId;
+    
+    @Column(name="category")
+    public String category;
+    
+    @Column(name="sub_category")
+    public String subCategory;
+    
+    @Column(name="created_date")
+    public Date createdDate;
+    
+    @Column(name="updated_date")
+    public Date updatedDate;
 }

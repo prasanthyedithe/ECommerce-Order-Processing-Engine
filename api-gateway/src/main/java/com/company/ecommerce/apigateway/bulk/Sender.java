@@ -1,9 +1,5 @@
 package com.company.ecommerce.apigateway.bulk;
 
-import com.company.ecommerce.apigateway.dtos.OrderDto;
-import com.company.ecommerce.apigateway.dtos.OrderStatusDto;
-import org.apache.kafka.common.protocol.Message;
-import org.apache.kafka.common.protocol.MessageUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +7,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
+import com.company.ecommerce.apigateway.dtos.OrderDto;
+import com.company.ecommerce.apigateway.dtos.OrderStatusDto;
 
 @Service
 public class Sender {

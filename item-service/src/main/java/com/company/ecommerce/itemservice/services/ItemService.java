@@ -1,15 +1,16 @@
 package com.company.ecommerce.itemservice.services;
 
+import java.util.List;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
+import org.springframework.stereotype.Service;
+
 import com.company.ecommerce.itemservice.dtos.ItemDto;
 import com.company.ecommerce.itemservice.entities.OrderItem;
 import com.company.ecommerce.itemservice.exceptions.NotFoundException;
 import com.company.ecommerce.itemservice.repositories.ItemRepository;
 import com.company.ecommerce.itemservice.repositories.OrderItemRepository;
-import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Service
 public class ItemService implements IItemService {
@@ -47,6 +48,11 @@ public class ItemService implements IItemService {
         output.name = x.item.name;
         output.price = x.item.price;
         output.quantity = x.quantity;
+        output.category = x.item.category;
+        output.productId = x.item.productId;
+        output.subCategory = x.item.subCategory;
+        output.createdDate = x.createdDate;
+        output.updatedDate = x.updatedDate;
         return output;
     }
 }

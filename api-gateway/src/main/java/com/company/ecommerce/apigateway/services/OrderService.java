@@ -1,16 +1,21 @@
 package com.company.ecommerce.apigateway.services;
 
-import com.company.ecommerce.apigateway.clients.AddressClient;
-import com.company.ecommerce.apigateway.clients.ItemClient;
-import com.company.ecommerce.apigateway.clients.OrderClient;
-import com.company.ecommerce.apigateway.clients.PaymentMethodClient;
-import com.company.ecommerce.apigateway.dtos.*;
+import java.util.Date;
+import java.util.UUID;
+import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
-import java.util.stream.Collectors;
+import com.company.ecommerce.apigateway.clients.AddressClient;
+import com.company.ecommerce.apigateway.clients.ItemClient;
+import com.company.ecommerce.apigateway.clients.OrderClient;
+import com.company.ecommerce.apigateway.clients.PaymentMethodClient;
+import com.company.ecommerce.apigateway.dtos.AddressDto;
+import com.company.ecommerce.apigateway.dtos.ItemDto;
+import com.company.ecommerce.apigateway.dtos.OrderDto;
+import com.company.ecommerce.apigateway.dtos.PaymentMethodDto;
 
 @Service
 public class OrderService implements IOrderService {
@@ -36,6 +41,8 @@ public class OrderService implements IOrderService {
         savedOrder.addresses = order.addresses.parallelStream().map(x -> addAddressToOrder(x, savedOrder.id)).collect(Collectors.toList());
         savedOrder.items = order.items.parallelStream().map(x -> addItemToOrder(x, savedOrder.id)).collect(Collectors.toList());
         savedOrder.paymentMethods = order.paymentMethods.parallelStream().map(x -> addPaymentMethodToOrder(x, savedOrder.id)).collect(Collectors.toList());
+        savedOrder.createdDate = new Date();
+        savedOrder.updatedDate = new Date();
         LOGGER.info("Successfully created order");
         return savedOrder;
     }

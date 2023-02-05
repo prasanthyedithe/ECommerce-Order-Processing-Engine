@@ -1,9 +1,9 @@
 package com.company.ecommerce.paymentmethodservice.services;
 
-import com.company.ecommerce.paymentmethodservice.dtos.PaymentMethodDto;
-
 import java.util.List;
 import java.util.UUID;
+
+import com.company.ecommerce.paymentmethodservice.dtos.PaymentMethodDto;
 
 public interface IPaymentMethodService {
     PaymentMethodDto addPaymentMethodToOrder(PaymentMethodDto paymentMethod, UUID orderId);

@@ -1,12 +1,18 @@
 package com.company.ecommerce.apigateway.clients;
 
-import com.company.ecommerce.apigateway.dtos.Item;
-import com.company.ecommerce.apigateway.dtos.ItemDto;
-import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.UUID;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.company.ecommerce.apigateway.dtos.Item;
+import com.company.ecommerce.apigateway.dtos.ItemDto;
 
 @FeignClient("item-service")
 public interface ItemClient {

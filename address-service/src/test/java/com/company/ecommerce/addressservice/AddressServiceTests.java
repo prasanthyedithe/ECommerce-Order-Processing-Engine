@@ -1,5 +1,17 @@
 package com.company.ecommerce.addressservice;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
 import com.company.ecommerce.addressservice.dtos.AddressDto;
 import com.company.ecommerce.addressservice.entities.Address;
 import com.company.ecommerce.addressservice.entities.OrderAddress;
@@ -7,13 +19,6 @@ import com.company.ecommerce.addressservice.exceptions.NotFoundException;
 import com.company.ecommerce.addressservice.repositories.AddressRepository;
 import com.company.ecommerce.addressservice.repositories.OrderAddressRepository;
 import com.company.ecommerce.addressservice.services.AddressService;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import java.util.*;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class AddressServiceTests {

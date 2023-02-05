@@ -1,15 +1,17 @@
 package com.company.ecommerce.apigateway.controllers;
 
-import com.company.ecommerce.apigateway.bulk.Sender;
-import com.company.ecommerce.apigateway.dtos.OrderDto;
-import com.company.ecommerce.apigateway.dtos.OrderStatusDto;
+import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletResponse;
-import java.util.List;
+import com.company.ecommerce.apigateway.bulk.Sender;
+import com.company.ecommerce.apigateway.dtos.OrderDto;
+import com.company.ecommerce.apigateway.dtos.OrderStatusDto;
 
 @RestController
 @RequestMapping("/orders-bulk")

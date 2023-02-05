@@ -1,5 +1,6 @@
 package com.company.ecommerce.apigateway.dtos;
 
+import java.util.Date;
 import java.util.UUID;
 
 public class Address {
@@ -9,5 +10,7 @@ public class Address {
     public String city;
     public String state;
     public String zip;
+    public Date createdDate;
+    public Date updatedDate;
 }
 

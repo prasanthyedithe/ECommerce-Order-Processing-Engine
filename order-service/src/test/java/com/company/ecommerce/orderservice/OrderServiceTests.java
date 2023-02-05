@@ -1,5 +1,14 @@
 package com.company.ecommerce.orderservice;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.util.Optional;
+import java.util.UUID;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
 import com.company.ecommerce.entities.Customer;
 import com.company.ecommerce.entities.Order;
 import com.company.ecommerce.orderservice.dtos.CustomerDto;
@@ -8,14 +17,6 @@ import com.company.ecommerce.orderservice.exceptions.NotFoundException;
 import com.company.ecommerce.orderservice.repositories.CustomerRepository;
 import com.company.ecommerce.orderservice.repositories.OrderRepository;
 import com.company.ecommerce.orderservice.services.OrderService;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import java.util.Optional;
-import java.util.UUID;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class OrderServiceTests {
     private final OrderRepository orderRepository;

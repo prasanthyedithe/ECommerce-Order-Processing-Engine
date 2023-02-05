@@ -1,7 +1,8 @@
 package com.company.ecommerce.apigateway.bulk;
 
-import com.company.ecommerce.apigateway.dtos.OrderDto;
-import com.company.ecommerce.apigateway.dtos.OrderStatusDto;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,8 +13,8 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.core.ProducerFactory;
 import org.springframework.kafka.support.serializer.JsonSerializer;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.company.ecommerce.apigateway.dtos.OrderDto;
+import com.company.ecommerce.apigateway.dtos.OrderStatusDto;
 
 @Configuration
 public class SenderConfig {

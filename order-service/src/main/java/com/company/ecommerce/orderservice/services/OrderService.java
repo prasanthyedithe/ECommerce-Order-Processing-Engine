@@ -1,15 +1,19 @@
 package com.company.ecommerce.orderservice.services;
 
-import com.company.ecommerce.entities.*;
-import com.company.ecommerce.orderservice.dtos.*;
-import com.company.ecommerce.orderservice.exceptions.BadRequestException;
-import com.company.ecommerce.orderservice.exceptions.NotFoundException;
-import com.company.ecommerce.orderservice.repositories.*;
+import java.util.UUID;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
+import com.company.ecommerce.entities.Customer;
+import com.company.ecommerce.entities.Order;
+import com.company.ecommerce.orderservice.dtos.CustomerDto;
+import com.company.ecommerce.orderservice.dtos.OrderDto;
+import com.company.ecommerce.orderservice.exceptions.BadRequestException;
+import com.company.ecommerce.orderservice.exceptions.NotFoundException;
+import com.company.ecommerce.orderservice.repositories.CustomerRepository;
+import com.company.ecommerce.orderservice.repositories.OrderRepository;
 
 @Service
 public class OrderService implements IOrderService{
@@ -63,6 +67,8 @@ public class OrderService implements IOrderService{
         output.tax = order.tax;
         output.shippingCharges = order.shippingCharges;
         output.total = order.total;
+        output.createdDate = order.createdDate;
+        output.updatedDate = order.updatedDate;
 
         logger.info("Converting order customer entity to dto {}", order.customer);
         output.customer = customerEntityToDto(order.customer);
@@ -89,6 +95,8 @@ public class OrderService implements IOrderService{
         output.subtotal = order.subtotal;
         output.tax = order.tax;
         output.total = order.total;
+        output.createdDate = order.createdDate;
+        output.updatedDate = order.updatedDate;
         output.customer = customerDtoToEntity(order.customer);
         return output;
     }

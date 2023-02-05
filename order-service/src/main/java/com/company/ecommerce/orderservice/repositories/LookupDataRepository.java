@@ -5,8 +5,9 @@ import java.util.UUID;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.company.ecommerce.entities.Customer;
+import com.company.ecommerce.entities.LookupData;
 
-public interface CustomerRepository  extends CrudRepository<Customer, UUID> {
-    List<Customer> findAll();
+public interface LookupDataRepository  extends CrudRepository<LookupData, UUID> {
+	 List<LookupData> findAll();
+
 }

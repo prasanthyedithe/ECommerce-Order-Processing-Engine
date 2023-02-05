@@ -1,5 +1,6 @@
 package com.company.ecommerce.apigateway.dtos;
 
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
@@ -16,5 +17,7 @@ public class OrderDto {
     public List<ItemDto> items;
     public List<AddressDto> addresses;
     public List<PaymentMethodDto> paymentMethods;
+    public Date createdDate;
+    public Date updatedDate;
 
 }

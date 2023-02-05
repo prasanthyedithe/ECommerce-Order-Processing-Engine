@@ -1,5 +1,17 @@
 package com.company.ecommerce.itemservice;
 
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+import java.util.UUID;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
 import com.company.ecommerce.itemservice.dtos.ItemDto;
 import com.company.ecommerce.itemservice.entities.Item;
 import com.company.ecommerce.itemservice.entities.OrderItem;
@@ -7,13 +19,6 @@ import com.company.ecommerce.itemservice.exceptions.NotFoundException;
 import com.company.ecommerce.itemservice.repositories.ItemRepository;
 import com.company.ecommerce.itemservice.repositories.OrderItemRepository;
 import com.company.ecommerce.itemservice.services.ItemService;
-import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
-import java.util.*;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class ItemServiceTests {
